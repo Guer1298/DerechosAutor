@@ -1,0 +1,15 @@
+.site-footer { border-top: 1px solid var(--line); padding-top: 62px; }
+.footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.1fr; gap: 45px; padding-bottom: 52px; }
+.footer-brand p { font-size: 13px; margin-top: 24px; line-height: 1.85; }
+.footer-signature { display: block; margin-top: 25px; font-family: var(--font-serif); font-size: 16px; font-style: italic; color: var(--primary); }
+.footer-top h2 { font-family: var(--font-sans); font-size: 12px; letter-spacing: .04em; font-weight: 600; margin-block: 8px 20px; }
+.footer-top nav { display: flex; flex-direction: column; align-items: start; }
+.footer-top nav a { display: inline-flex; align-items: center; min-height: 35px; font-size: 12px; color: var(--text-soft); }
+.footer-top nav a:hover { color: var(--primary); text-decoration: underline; text-underline-offset: 4px; }
+.footer-top .text-link { gap: 7px; }
+.footer-top .text-link .icon { width: 15px; }
+.contact-pending { font-size: 11px; color: var(--text-soft); line-height: 1.8; margin-block: 6px 12px; }
+.footer-bottom { border-top: 1px solid var(--line); padding-block: 23px; display: flex; justify-content: space-between; align-items: center; gap: 25px; font-size: 10px; color: var(--text-soft); }
+.footer-bottom p { font-size: 10px; }
+.theme-toggle { background: transparent; border: 0; padding: 0; font-size: 11px; color: var(--text-soft); }
+.theme-toggle .icon { width: 16px; height: 16px; }

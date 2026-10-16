@@ -1,0 +1,20 @@
+{
+  "name": "autoria-colombia",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Biblioteca editorial de derecho de autor colombiano",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/dev.mjs",
+    "start": "node scripts/serve.mjs",
+    "pretest": "npm run build",
+    "test": "node --test tests/unit/*.test.mjs tests/integration/*.test.mjs",
+    "check": "node scripts/check.mjs && npm test",
+    "test:e2e": "node scripts/e2e.mjs",
+    "predeploy": "npm run check"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

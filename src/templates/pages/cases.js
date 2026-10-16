@@ -1,0 +1,6 @@
+import { cases as caseEntries } from '../../content/cases.js';
+import { pageHeading, icon, e } from '../shared.js';
+
+export function cases() {
+  return `<div class="container page-shell">${pageHeading("Casos prácticos", "El derecho, en<br><em>la vida cotidiana.</em>", "Situaciones ilustrativas para reconocer los factores que importan. Puedes leer las explicaciones directamente o elegir una respuesta.")}<div class="case-list">${caseEntries.map((c, i) => `<article class="case-card" id="${c.id}" data-case="${c.id}"><span class="eyebrow">CASO ${String(i + 1).padStart(2, "0")}</span><h2>${e(c.title)}</h2><p>${e(c.situation)}</p><fieldset class="js-only"><legend>${e(c.question)}</legend><div class="choice-list">${c.options.map((o, j) => `<button type="button" class="choice-button" data-case-answer="${j}" aria-pressed="false"><span class="choice-letter">${String.fromCharCode(65 + j)}</span>${e(o)}</button>`).join("")}</div><p class="case-feedback" role="status"></p></fieldset><details class="case-explanation"><summary>Leer el análisis del caso</summary><p>${e(c.explanation)}</p><p><strong>Aspectos relevantes:</strong> ${c.legalPoints.map(e).join(", ")}.</p><a class="text-link" href="fuentes.html">Fuente: ${e(c.source)} ${icon("arrow")}</a></details></article>`).join("")}</div></div>`;
+}
